@@ -1,5 +1,3 @@
-//https://www.youtube.com/yellowpurple
-//https://www.youtube.com/channel/UCNqYc-ojesF6AbXwiWdZbeg?sub_confirmation=1
 
 
 #include <Arduino.h>
