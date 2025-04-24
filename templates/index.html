@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <title>NetGuard Chatbot</title>
+</head>
+<body>
+
+<div class="chat-container">
+  <!-- Chat Messages -->
+  <div class="messages" id="messages"></div>
+
+  <!-- Welcome Screen with Suggestions -->
+  <div class="welcome-screen" id="welcomeScreen">
+    <h2 class="welcome-title">👾 Welcome to <span class="highlight">NetGuard!</span></h2>
+    <p class="welcome-text">
+      You've connected to a <span class="bold">suspicious network...</span>
+      <span class="danger-text">Are you being hacked?</span> 🕵️‍♂️
+    </p>
+    <p class="welcome-text">Let me help you <span class="bold">stay safe</span> 🚨</p>
+
+    <div class="suggestions">
+      <button class="suggestion-btn" onclick="selectPrompt('🔒 What are the risks of using public WiFi?')">
+        🔒 What are the risks of using public WiFi?
+      </button>
+      <button class="suggestion-btn" onclick="selectPrompt('🦹‍♂️ How do hackers create fake WiFi networks?')">
+        🦹‍♂️ How do hackers create fake WiFi networks?
+      </button>
+      <button class="suggestion-btn" onclick="selectPrompt('💡 What’s a man-in-the-middle attack and how do I prevent it?')">
+        💡 What’s a man-in-the-middle attack and how do I prevent it?
+      </button>
+      <button class="suggestion-btn" onclick="selectPrompt('📶 How to safely browse on public WiFi without getting hacked?')">
+        📶 How to safely browse on public WiFi without getting hacked?
+      </button>
+    </div>
+  </div>
+
+  <!-- Input Box -->
+  <div class="input-container">
+    <input
+      type="text"
+      id="chatInput"
+      class="chat-input"
+      placeholder="Type a message..."
+    />
+    <button id="sendBtn" class="send-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" width="24" height="24">
+        <path d="M3 21v-7l13.5-4.5-13.5-4.5v-7l21 11z"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- Include JavaScript File -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.0.1/marked.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
